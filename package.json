@@ -1,6 +1,17 @@
 {
   "scripts": {
+    "build": "webpack && cp -r public/. dist",
     "start": "node src/server.js"
+  },
+  "babel": {
+    "presets": [
+      [
+        "@babel/preset-react",
+        {
+          "runtime": "automatic"
+        }
+      ]
+    ]
   },
   "dependencies": {
     "@babel/core": "^7.23.9",
