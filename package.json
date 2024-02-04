@@ -1,7 +1,7 @@
 {
   "scripts": {
     "build": "webpack && cp -r public/. dist",
-    "start": "node src/server.js"
+    "start": "node --conditions react-server src/server.js"
   },
   "babel": {
     "presets": [

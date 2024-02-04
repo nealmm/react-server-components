@@ -1,4 +1,5 @@
 const path = require('path');
+const ReactServerPlugin = require('react-server-dom-webpack/plugin');
 
 module.exports = {
   entry: './src/client.js',
@@ -14,5 +15,8 @@ module.exports = {
         exclude: /node_modules/
       }
     ]
-  }
+  },
+  plugins: [
+    new ReactServerPlugin({ isServer: false })
+  ]
 };

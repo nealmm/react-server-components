@@ -1,6 +1,4 @@
 import { createRoot } from 'react-dom/client';
-import { createElement } from 'react';
+import { createFromFetch } from 'react-server-dom-webpack/client';
 
-import App from './components/App.jsx';
-
-createRoot(document.body).render(createElement(App));
+createRoot(document.documentElement).render(await createFromFetch(fetch('/react')));
